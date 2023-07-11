@@ -3,9 +3,9 @@
     <h1>Plant Details Links</h1>
     <ul class="link-list">
       <li><a href="Plants/1.html">Plant 1</a></li>
-      <li><a href="Plants/2.htm">Plant 2</a></li>
-      <li><a href="Plants/3.htm">Plant 3</a></li>
-      <li><a href="Plants/4.htm">Plant 4</a></li>
+      <li><a href="Plants/2.html">Plant 2</a></li>
+      <li><a href="Plants/3.html">Plant 3</a></li>
+      <li><a href="Plants/4.html">Plant 4</a></li>
       <li><a href="5.html">Plant 5</a></li>
       <li><a href="6.html">Plant 6</a></li>
       <li><a href="7.html">Plant 7</a></li>
