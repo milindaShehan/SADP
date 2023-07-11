@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="si">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
+      background-color: #f3fbee;
       margin: 0;
       padding: 20px;
       display: flex;
@@ -18,7 +18,8 @@
 
     .links-container {
       max-width: 600px;
-      background-color: #fff;
+      width: 100%;
+      background-color: #ffffff;
       border-radius: 8px;
       padding: 20px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -29,45 +30,91 @@
       color: #333;
     }
 
-    .link-list {
-      margin-bottom: 20px;
+    .link-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 10px;
+      margin-top: 20px;
     }
 
-    .link-list li {
-      list-style-type: none;
-      margin-bottom: 10px;
+    .link-box {
+      background-color: #55c57a;
+      padding: 20px;
+      text-align: center;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      border-radius: 8px;
     }
 
-    .link-list a {
-      display: inline-block;
-      color: #333;
+    .link-box:hover {
+      background-color: #10a246;
+    }
+
+    .link-box a {
+      color: #fff;
       text-decoration: none;
+      font-size: 18px;
+      text-decoration: none; /* Remove underline */
     }
 
-    .link-list a:hover {
-      text-decoration: underline;
+    .footer {
+      margin-top: 20px;
+      text-align: center;
     }
+
   </style>
 </head>
 <body>
-  
   <div class="links-container">
-    <h1>Plant Details Links</h1>
-    <ul class="link-list">
-      <li><a href="Plants/1.html">Plant 1</a></li>
-      <li><a href="Plants/2.html">Plant 2</a></li>
-      <li><a href="Plants/3.html">Plant 3</a></li>
-      <li><a href="Plants/4.html">Plant 4</a></li>
-      <li><a href="Plants/5.html">Plant 5</a></li>
-      <li><a href="Plants/6.html">Plant 6</a></li>
-      <li><a href="Plants/7.html">Plant 7</a></li>
-      <li><a href="Plants/8.html">Plant 8</a></li>
-      <li><a href="Plants/9.html">Plant 9</a></li>
-      <li><a href="Plants/10.html">Plant 10</a></li>
-      <li><a href="Plants/11.html">Plant 11</a></li>
-      <li><a href="Plants/12.html">Plant 12</a></li>
-      <li><a href="Plants/13.html">Plant 13</a></li>
-    </ul>
+    <h1>ක්ශේස්ත්‍ර ප්‍රායෝගික සැලැස්ම</h1>
+    <div class="link-grid">
+      <a href="Plants/1.html" class="link-box">
+        <div>Plant 1</div>
+      </a>
+      <a href="Plants/2.html" class="link-box">
+        <div>Plant 2</div>
+      </a>
+      <a href="Plants/3.html" class="link-box">
+        <div>Plant 3</div>
+      </a>
+      <a href="Plants/4.html" class="link-box">
+        <div>Plant 4</div>
+      </a>
+      <a href="Plants/5.html" class="link-box">
+        <div>Plant 5</div>
+      </a>
+      <a href="Plants/6.html" class="link-box">
+        <div>Plant 6</div>
+      </a>
+      <a href="Plants/7.html" class="link-box">
+        <div>Plant 7</div>
+      </a>
+      <a href="Plants/8.html" class="link-box">
+        <div>Plant 8</div>
+      </a>
+      <a href="Plants/9.html" class="link-box">
+        <div>Plant 9</div>
+      </a>
+      <a href="Plants/10.html" class="link-box">
+        <div>Plant 10</div>
+      </a>
+      <a href="Plants/11.html" class="link-box">
+        <div>Plant 11</div>
+      </a>
+      <a href="Plants/12.html" class="link-box">
+        <div>Plant 12</div>
+      </a>
+      <a href="Plants/13.html" class="link-box">
+        <div>Plant 13</div>
+      </a>
+    </div>
+    <br>
+    <div class="footer">
+      <footer>
+        &copy; 2023 All rights reserved.
+      </footer>
+    </div>
   </div>
+  
 </body>
 </html>
