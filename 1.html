@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>පැල් විස්තර</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 600px;
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    .plant-image {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .plant-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .details {
+      margin-bottom: 20px;
+    }
+
+    .details p {
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    .reasons-list {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    .reasons-list li {
+      list-style-type: disc;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1><span id="name"></span></h1>
+
+    <div class="plant-image">
+      <img src="" alt="පැල් රුව" id="plant-image">
+    </div>
+
+    <div class="details">
+      <p><b>විද්‍යාත්මක නාමය : </b><span id="scientific-name"></span></p>
+      <p><b>කුලය : </b><span id="Caste"></span></p>
+      <p><b>ප්‍රභේදය : </b><span id="genre"></span></p>
+      <p><b>වගා කිරීමට අපේක්ෂිත භූමි ප්‍රමණය: </b><span id="area"></span></p>
+      <p><b>මෙම ප්‍රභේදය තෝරා ගැනීමට හේතු : </b><span id="reasons"></span></p>
+    </div>
+  </div>
+
+  <script>
+    var plantData = {
+      name:"බඩඉරිඟු",
+      image: "1.jpg",
+      scientificName: "Helianthus annuus",
+      area: "උතුරු ඇමෙරිකාව",
+      Caste: "උතුරු ඇමෙරිකාව",
+      genre: "හදුන් රුව උපන්දින්ගේ වාහන ස්ථානය ඇති මායා සමග සමුහය ස්වයංක්‍රීය වර්ණවුවක් වේ.",
+      reasons: [
+        "හිමි මිලය සහ අන්‍යයේදීම සම්බන්ධයෙන් රැල්ලට පැල් ලබාගන්නා මායා වූ නමක් වේ.",
+        "Reason 2",
+        "Reason 3"
+      ]
+    };
+
+    document.getElementById('plant-image').src = plantData.image;
+    document.getElementById('name').textContent = plantData.name;
+    document.getElementById('scientific-name').textContent = plantData.scientificName;
+    document.getElementById('area').textContent = plantData.area;
+    document.getElementById('Caste').textContent = plantData.Caste;
+    document.getElementById('genre').textContent = plantData.genre;
+
+    var reasonsList = document.getElementById('reasons');
+    var reasonsHTML = '';
+    for (var i = 0; i < plantData.reasons.length; i++) {
+      reasonsHTML += '<li>' + plantData.reasons[i] + '</li>';
+    }
+    reasonsList.innerHTML = '<ul class="reasons-list">' + reasonsHTML + '</ul>';
+  </script>
+</body>
+</html>
