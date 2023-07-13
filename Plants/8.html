@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>පැල් විස්තර</title>
+  <title>Land</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -37,8 +37,41 @@
     .plant-image img {
       max-width: 100%;
       height: auto;
-      border-radius: 15px;
+      border-radius: 0px;
     }
+    .legend {
+    margin-top: 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .legend ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+  }
+
+  .legend li {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+  }
+
+  .legend li::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+    border-radius: 50%;
+    background-color: #000;
+    vertical-align: middle;
+  }
 
     .details {
       margin-bottom: 20px;
@@ -63,40 +96,57 @@
   <div class="container">
     <h1><span id="name"></span></h1>
 
+    
+
+    <div class="details">
+      
+      
+
+
+      <p><b></b><span id="reasons"></span></p>
+      <p><b>භූමි සැකැස්ම</b><span id="area"></span></p>
+    </div>
     <div class="plant-image">
       <img src="" alt="පැල් රුව" id="plant-image">
     </div>
-
-    <div class="details">
-      <p><b>විද්‍යාත්මක නාමය : </b><span id="scientific-name"></span></p>
-      <p><b>කුලය : </b><span id="Caste"></span></p>
-      <p><b>ප්‍රභේදය : </b><span id="genre"></span></p>
-      <p><b>වගා කිරීමට අපේක්ෂිත භූමි ප්‍රමණය : </b><span id="area"></span></p>
-      <p><b>මෙම ප්‍රභේදය තෝරා ගැනීමට හේතු : </b><span id="reasons"></span></p>
+    <div class="legend">
+      <span>A- ප්‍රධාන පාර</span>
+      <span>B - බතල</span>
+      <span>C- තක්කාලි</span>
+      <span>D-  ගෝවා</span>
+      <span>E - කව්පි</span>
+      <span>F - බණ්ඩක්කා</span>
+      <span>G- මෑ</span>
+      <span>H- කංකුන්</span>
+      <span>I- බඩ ඉරිගු</span>
+      <span>J- කාණු</span>
+      <span>K- ආරුක්කු</span>
+      <span>L- වගාකුළුණු</span>
     </div>
+    <div class="group-info" style="position: absolute; left: 50%; transform: translateX(-50%); font-size: 12px;">
+      Project by <a href="team.html">Group 05</a>
+    </div>
+    <br>
   </div>
 
   <script>
     var plantData = {
-      name:"කංකුං",
-      image: "7.jpg",
-      scientificName: "Ipomea aqatissa",
-      area: "වර්ග මීටර්  48.3",
-      Caste: "Convolulacae",
-      genre: "දේශිය",
+      name:"භූමි සංවර්ධන සැලැස්ම  ",
+      image: "land.png",
       reasons: [
-        "දිවයිනේ සැම ප්‍රදේශය වගා කිරිමට හැක.",
-        "කද කොළ පැහැති වැල් ආකරය.",
-        "ජලය රුදෙන ස්ථානවල වගා කළ හැකිවිම."
+      "මිය මද බෑවුම්,බොරළු සහිත පසකි.",
+      "ප්‍රධාන බෝග 07ක් ස්ථාපිත කිරීම සඳහා භූමිය වෙන් කිරීම.",
+      "වෙන් කරන ලද භූමියේ බටහිර මායිම බඩ ඉරිඟු වැටියක් ලෙස ස්ථාපිත කිරීම.",
+      "වෙන් කරන ලද භූමිය ආකර්ෂණීය ලෙස දිස්වීම සඳහාත් ආනතිය සැලකිල්ලට ගෙන බෝගස්ථාපනය කිරීම.",
+      "භූමියෙන් උපරිම ප්‍රයෝජන ලබා ගැනීමටත් භූමි අලංකරණය ඇති කිරීම සඳහාත් ආරැක්කු සකස් කර වැල් බෝග ස්ථාපිත කිරීම.",
+      "වගා කුළුණු 02ක් ස්ථාපිත කිරීම.",
+      "බෝග සතුන්ගෙන් ආරක්ශා කර ගැනීම සදහා ආරක්ශිත දැලක් භාවිතා කිරීමට කටයුතු කිරීම.",
+      "බෝග අතර දාස්පෙතියා වැටක් යෙදීම"
       ]
     };
 
     document.getElementById('plant-image').src = plantData.image;
     document.getElementById('name').textContent = plantData.name;
-    document.getElementById('scientific-name').textContent = plantData.scientificName;
-    document.getElementById('area').textContent = plantData.area;
-    document.getElementById('Caste').textContent = plantData.Caste;
-    document.getElementById('genre').textContent = plantData.genre;
 
     var reasonsList = document.getElementById('reasons');
     var reasonsHTML = '';
@@ -107,3 +157,4 @@
   </script>
 </body>
 </html>
+
